@@ -1,50 +1,84 @@
-# React + TypeScript + Vite
+# Time Tracking Dashboard Laura Dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This solo project Time Tracking Dashboard
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Challenge: A perfect opportunity to practice your CSS Grid skills. For anyone wanting to take it up a notch, we provide a JSON data file to practice working with data.
 
-- Configure the top-level `parserOptions` property like this:
+Your users should be able to:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Switch between viewing Daily, Weekly, and Monthly stats
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Screenshots
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+<p style="font-size:20px;">Desktop Version:</p>
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+
+<p style="font-size:20px;">Desktop Version Body Component:</p>
+
+
+
+<p style="font-size:20px;">Desktop Version Footer Component:</p>
+
+
+
+<p style="font-size:20px;">Mobile Version Landing Page:</p>
+
+
+
+<p style="font-size:20px;">Mobile Version Side Navigation Bar:</p>
+
+
+
+## Links
+
+- Live Site URL: [Time Tracking Dashboard Website Laura Dev]()
+- Frontend Mentor URL Solution: [Frontend Mentor Laura Dev Solution]()
+
+## My Process
+
+
+## Built with
+
+- Typescript
+- TailwindCSS
+- ReactJS
+- Google Fonts
+- Github
+
+## What I learned
+
+I reinforced and learned a lot of new things during this project. Some of things that were more relevant:
+
+1. **_Typescript Programming Language_** - This was first project using Typescript. I was able to learn more about Typescript by reviewing documentation and reading. I will continue to build on my Typescript knowledge.
+
+
+## Continued development
+
+
+## Useful resources
+
+- [TypeScript](https://www.typescriptlang.org/) - Typescript General Website
+
+
+## Author
+
+- Website - [Laura V](www.lauradeveloper.com)
+- Frontend Mentor - [@lavollmer](https://www.frontendmentor.io/profile/lavollmer)
+- Github - [@lavollmer](https://github.com/lavollmer)
