@@ -1,3 +1,9 @@
+# Things to Work On
+
+- Debugging tailwindcss config file
+- Laying out the template of colors and styles
+- Figuring out how to showcase daily, weekly and yearly styles
+
 # Time Tracking Dashboard Laura Dev
 
 This solo project Time Tracking Dashboard
