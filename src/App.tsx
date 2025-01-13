@@ -1,12 +1,14 @@
-import { useState } from "react";
 import "./App.css";
+import Card from "./components/Card";
+import Profile from "./components/Profile";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div> Hello</div>
+      <div>
+        <Profile/>
+        <Card/>
+      </div>
     </>
   );
 }
