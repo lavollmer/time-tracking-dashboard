@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
@@ -19,10 +19,10 @@ export default {
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
       },
-      fontWeight:{
-          light: 300,
-          regular: 400,
-          medium: 500,
+      fontWeight: {
+        light: 300,
+        regular: 400,
+        medium: 500,
       },
       fontSize: {
         '18': '18px',

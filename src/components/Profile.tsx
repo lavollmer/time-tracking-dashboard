@@ -1,10 +1,15 @@
 import ProfileImage from "../assets/image-jeremy.png";
+import "../index.css";
 
 const Profile = () => {
   return (
-    <div>
+    <div className="flex flex-col bg-blue text-white font-rubik p-4">
       <div>
-        <img src={ProfileImage} alt="Profile Image" />
+        <img
+          src={ProfileImage}
+          alt="Profile Image"
+          className="border border-1-white"
+        />
       </div>
       <div>
         <h1>Report for</h1>
