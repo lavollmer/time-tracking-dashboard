@@ -75,7 +75,7 @@ I reinforced and learned a lot of new things during this project. Some of things
 ## Useful resources
 
 - [TypeScript](https://www.typescriptlang.org/) - Typescript General Website
-
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik) - Weights: 300, 400, 500
 
 ## Author
 
