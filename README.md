@@ -72,7 +72,7 @@ Your users should be able to:
 
 I reinforced and learned a lot of new things during this project. Some of things that were more relevant:
 
-1. **_Typescript Programming Language_** - This was first project using Typescript. I was able to learn more about Typescript by reviewing documentation and reading. I will continue to build on my Typescript knowledge.
+1. **_TailwindCSS Setup_** - I found that I had issues in the beginning with my TailwindCSS setup. Through the debugging process, I was able to learn that the plugins field in the tailwindcss config file needed to be an empty array. I had it with {} instead of []. The plugins field needs to hold a list of plugins that extends Tailwind's functionality. 
 
 
 ## Continued development
