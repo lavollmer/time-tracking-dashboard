@@ -3,12 +3,12 @@ import "../index.css";
 
 const Profile = () => {
   return (
-    <div className="flex flex-col text-blue font-rubik p-4">
+    <div className="flex flex-col text-white font-rubik p-4">
       <div>
         <img
           src={ProfileImage}
           alt="Profile Image"
-          className="border border-1-white"
+          className="border border-1-white rounded"
         />
       </div>
       <div>

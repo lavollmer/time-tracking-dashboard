@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:css": "tailwindcss -i ./src/index.css -o ./dist/index.css"
+   "build:css": "postcss src/index.css -o dist/index.css",
+    "dev": "nodemon"
   },
   "dependencies": {
     "react": "^18.3.1",
