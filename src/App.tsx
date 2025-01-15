@@ -7,7 +7,8 @@ function App() {
   return (
     <>
       <div className="container-bg">
-        <div className="flex flex-row justify-center items-center">
+        <div className="grid grid-2-cols flex flex-row"></div>
+        <div>
           <Profile />
         </div>
         <div>

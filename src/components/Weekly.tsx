@@ -8,8 +8,8 @@ import Study from "../assets/icon-study.svg";
 
 const Weekly = () => {
   return (
-    <div className="flex flex-row space-x-4">
-      <div className="flex flex-row space-x-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
         <Card
           image={Work}
           title="Work"
@@ -32,7 +32,7 @@ const Weekly = () => {
           color="hsl(348, 100%, 68%)"
         />
       </div>
-      <div className="flex flex-row space-x-4">
+      <div>
         <Card
           image={Excercise}
           title="Excercise"
