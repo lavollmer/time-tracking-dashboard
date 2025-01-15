@@ -4,17 +4,17 @@ import "../App.css";
 
 const Profile = () => {
   return (
-    <div className="flex flex-col bg-blue text-white font-rubik p-4">
+    <div className="flex flex-col space-y-6 bg-blue text-white font-rubik p-4 rounded-lg">
       <div>
         <img
           src={ProfileImage}
           alt="Profile Image"
-          className="border border-1-white rounded"
+          className="border border-white rounded-full ring w-16 h-16"
         />
       </div>
-      <div className="text-center">
-        <h1>Report for</h1>
-        <h2>Jeremy Robson</h2>
+      <div className="text-left">
+        <h1 className="text-sm font-light">Report for</h1>
+        <h2 className="text-4xl font-regular">Jeremy Robson</h2>
       </div>
       <div>
         <h3>Daily</h3>
