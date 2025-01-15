@@ -4,12 +4,14 @@ interface CardProps {
   title: string;
   hours: string;
   total: string;
+  image: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, hours, total }) => {
+const Card: React.FC<CardProps> = ({ title, hours, total,image }) => {
   return (
-    <div>
+    <div className="text-white">
       <div>
+        <img src={image} alt="icon-work" />
         <div>
           <h1>{title}</h1>
           <button>
