@@ -72,7 +72,8 @@ Your users should be able to:
 
 I reinforced and learned a lot of new things during this project. Some of things that were more relevant:
 
-1. **_TailwindCSS Setup_** - I found that I had issues in the beginning with my TailwindCSS setup. Through the debugging process, I was able to learn that the plugins field in the tailwindcss config file needed to be an empty array. I had it with {} instead of []. The plugins field needs to hold a list of plugins that extends Tailwind's functionality. 
+1. **_TailwindCSS Setup_** - I found that I had issues in the beginning with my TailwindCSS setup. Through the debugging process, I was able to learn that the plugins field in the tailwindcss config file needed to be an empty array. I had it with {} instead of []. The plugins field needs to hold a list of plugins that extends Tailwind's functionality.
+2. **_Concurrently dev script_** - Concurrently is a command-line tool that allows multiple commands to run in a single terminal window. It allows the application to run multiple processes at the same time.
 
 
 ## Continued development
