@@ -1,6 +1,12 @@
-import {iconDots} from "../assets/icon-ellipsis.svg"
+import iconDots from "../assets/icon-ellipsis.svg";
 
-const Card = ({title,hours,total}) => {
+interface CardProps {
+  title: string;
+  hours: string;
+  total: string;
+}
+
+const Card: React.FC<CardProps> = ({ title, hours, total }) => {
   return (
     <div>
       <div>

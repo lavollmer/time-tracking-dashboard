@@ -1,6 +1,6 @@
 import "./index.css";
 import "./App.css";
-import Card from "./components/Card";
+import Weekly from "./components/Weekly";
 import Profile from "./components/Profile";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
           <Profile />
         </div>
         <div>
-          <Card />
+          <Weekly />
         </div>
       </div>
     </>
