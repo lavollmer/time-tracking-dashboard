@@ -3,7 +3,7 @@ import "../index.css";
 
 const Profile = () => {
   return (
-    <div className="flex flex-col text-white font-rubik p-4">
+    <div className="flex flex-col bg-blue text-white font-rubik p-4">
       <div>
         <img
           src={ProfileImage}
@@ -12,8 +12,8 @@ const Profile = () => {
         />
       </div>
       <div>
-        <h1>Report for</h1>
-        <h2>Jeremy Robson</h2>
+        <h1 className="text-18">Report for</h1>
+        <h2 className="text-lg">Jeremy Robson</h2>
       </div>
       <div>
         <h3>Daily</h3>

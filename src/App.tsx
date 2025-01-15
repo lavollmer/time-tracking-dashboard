@@ -7,8 +7,12 @@ function App() {
   return (
     <>
       <div className="container-bg">
-        <Profile />
-        <Card />
+        <div className="flex flex-row justify-center items-center">
+          <Profile />
+        </div>
+        <div>
+          <Card />
+        </div>
       </div>
     </>
   );
