@@ -25,9 +25,9 @@ module.exports = {
         medium: 500,
       },
       fontSize: {
-        '18': '18px',
+        18: "18px",
       },
     },
   },
-  plugins: []
+  plugins: [],
 };

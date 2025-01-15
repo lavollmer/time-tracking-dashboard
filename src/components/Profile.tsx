@@ -1,5 +1,6 @@
 import ProfileImage from "../assets/image-jeremy.png";
 import "../index.css";
+import "../App.css";
 
 const Profile = () => {
   return (
@@ -11,9 +12,9 @@ const Profile = () => {
           className="border border-1-white rounded"
         />
       </div>
-      <div>
-        <h1 className="text-18">Report for</h1>
-        <h2 className="text-lg">Jeremy Robson</h2>
+      <div className="text-center">
+        <h1>Report for</h1>
+        <h2>Jeremy Robson</h2>
       </div>
       <div>
         <h3>Daily</h3>
