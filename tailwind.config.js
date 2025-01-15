@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         blue: "hsl(246, 80%, 60%)",
-        lightRedWork: "hsl(15, 100%, 70%)",
+        lightOrange: "hsl(15, 100%, 70%)",
         softBluePlay: "hsl(195, 74%, 62%)",
         lightRedStudy: "hsl(348, 100%, 68%)",
         limeGreenExercise: "hsl(145, 58%, 55%)",

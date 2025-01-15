@@ -5,14 +5,15 @@ interface CardProps {
   hours: string;
   total: string;
   image: string;
+  color: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, hours, total, image }) => {
+const Card: React.FC<CardProps> = ({ title, hours, total, image, color }) => {
   return (
     <>
       <div className="flex flex-col">
-        <div className="bg-lightRedwork rounded-lg p-6 z-0">
-          <img src={image} alt="icon-work" />
+        <div className="rounded-lg p-6 z-0" style={{ backgroundColor: color }}>
+          <img src={image} alt="icon-work" className="h-2/3 w-1/3" />
         </div>
         <div className="text-white bg-darkBlue font-rubik p-6 rounded-lg z-10">
           <div>
