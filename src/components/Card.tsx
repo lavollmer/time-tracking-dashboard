@@ -7,19 +7,23 @@ interface CardProps {
   image: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, hours, total,image }) => {
+const Card: React.FC<CardProps> = ({ title, hours, total, image }) => {
   return (
-    <div className="text-white">
+    <div className="text-white bg-darkBlue font-rubik p-6 rounded-lg">
       <div>
-        <img src={image} alt="icon-work" />
         <div>
-          <h1>{title}</h1>
+          <img src={image} alt="icon-work" />
+        </div>
+        <div className="flex flex-row justify-between items-center">
+          <h1 className="font-medium text-lg">{title}</h1>
           <button>
             <img src={iconDots} alt="icon-dots" />
           </button>
         </div>
-        <h2>{hours}</h2>
-        <h3>{total}</h3>
+        <div className="flex flex-row justify-between items-center space-x-6">
+          <h2 className="font-regular text-4xl">{hours}</h2>
+          <h3 className="font-light text-sm text-paleBlue">{total}</h3>
+        </div>
       </div>
     </div>
   );
