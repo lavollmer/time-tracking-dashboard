@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ title, hours, total, image, color }) => {
           <img
             src={image}
             alt="icon-work"
-            className="p-2 z-15"
+            className="p-2 z-15 h-16 w-16"
           />
         </div>
         <div className="-mt-16 w-full text-white bg-darkBlue font-rubik p-6 rounded-lg z-20">
