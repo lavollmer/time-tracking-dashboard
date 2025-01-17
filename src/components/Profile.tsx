@@ -19,9 +19,11 @@ const Profile = () => {
         </div>
       </div>
       <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
-        <h3>Daily</h3>
-        <h3>Weekly</h3>
-        <h3>Monthly</h3>
+        <div className="flex flex-col space-y-2">
+          <button className="hover:font-bold">Daily</button>
+          <button className="hover:font-bold">Weekly</button>
+          <button className="hover:font-bold">Monthly</button>
+        </div>
       </div>
     </div>
   );
