@@ -1,8 +1,23 @@
 import ProfileImage from "../assets/image-jeremy.png";
 import "../index.css";
 import "../App.css";
+import {Navigate, useNavigate} from "react-router-dom";
 
 const Profile = () => {
+
+  const clickDaily = () => {
+    console.log("Daily Clicked");
+    Navigate("/daily");
+  };
+
+  const clickWeekly = () => {
+    console.log("Weekly Clicked");
+  }
+
+  const clickMonthly = () => {
+    console.log("Monthly Clicked");
+  }
+
   return (
     <div className="flex flex-col space-y-6 bg-blue text-white font-rubik p-4 rounded-lg">
       <div className="rounded-full">
@@ -20,9 +35,9 @@ const Profile = () => {
       </div>
       <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
         <div className="flex flex-col space-y-2">
-          <button className="hover:font-bold">Daily</button>
-          <button className="hover:font-bold">Weekly</button>
-          <button className="hover:font-bold">Monthly</button>
+          <button className="hover:font-bold" onClick={clickDaily}>Daily</button>
+          <button className="hover:font-bold" onClick={clickWeekly}>Weekly</button>
+          <button className="hover:font-bold" onClick={clickMonthly}>Monthly</button>
         </div>
       </div>
     </div>
