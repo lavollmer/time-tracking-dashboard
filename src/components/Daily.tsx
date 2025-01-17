@@ -13,15 +13,15 @@ const Daily = () => {
         <Card
           image={Work}
           title="Work"
-          hours="32hrs"
-          total="Last Week - 36hrs"
+          hours="5hrs"
+          total="Last Week - 7hrs"
           color="hsl(15, 100%, 70%)"
         />
         <Card
           image={Play}
           title="Play"
-          hours="10hrs"
-          total="Last Week - 8hrs"
+          hours="1hrs"
+          total="Last Week - 2hrs"
           color="hsl(195, 74%, 62%)"
         />
       </div>
@@ -29,16 +29,16 @@ const Daily = () => {
         <Card
           image={Study}
           title="Study"
-          hours="4hrs"
-          total="Last Week - 4hrs"
+          hours="0hrs"
+          total="Last Week - 1hrs"
           color="hsl(348, 100%, 68%)"
         />
 
         <Card
           image={Excercise}
           title="Excercise"
-          hours="4hrs"
-          total="Last Week - 4hrs"
+          hours="1hrs"
+          total="Last Week - 1hrs"
           color="hsl(145, 58%, 55%)"
         />
       </div>
@@ -46,15 +46,15 @@ const Daily = () => {
         <Card
           image={Social}
           title="Social"
-          hours="5hrs"
-          total="Last Week - 10hrs"
+          hours="1hrs"
+          total="Last Week - 3hrs"
           color="hsl(264, 64%, 52%)"
         />
         <Card
           image={SelfCare}
           title="Self Care"
-          hours="2hrs"
-          total="Last Week - 2hrs"
+          hours="0hrs"
+          total="Last Week - 1hrs"
           color="hsl(43, 84%, 65%)"
         />
       </div>
