@@ -2,6 +2,7 @@ import ProfileImage from "../assets/image-jeremy.png";
 import "../index.css";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
+import Data from "../data.json";
 
 const Profile = () => {
   const navigate = useNavigate();
