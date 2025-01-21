@@ -5,7 +5,6 @@ interface CardProps {
   title: string;
   hours: number;
   total: string;
-  image: string;
   color: string;
 }
 
@@ -17,11 +16,11 @@ const Card: React.FC<CardProps> = ({ title, hours, total, image, color }) => {
           className="rounded-lg z-10 flex justify-end items-start"
           style={{ backgroundColor: color }}
         >
-          <img
+          {/* <img
             src={image}
             alt="icon-work"
             className="p-2 z-15 h-16 w-16"
-          />
+          /> */}
         </div>
         <div className="-mt-16 w-full text-white bg-darkBlue font-rubik p-6 rounded-lg z-20">
           <div>
