@@ -7,10 +7,11 @@ const Universal = () => {
         <div className="flex flex-col space-y-6">
           {dataJson.map((data) => (
             <Card
-            key={data.id}
+            key={index}
             title={data.title}
             hours={data.timeframes.daily.current}
             total={`Last Week - ${data.timeframes.daily.previous}`}
+            color="hsl(15, 100%, 70%)"
             />
           )}
         </div>

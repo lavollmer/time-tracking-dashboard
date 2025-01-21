@@ -1,21 +1,17 @@
 import iconDots from "../assets/icon-ellipsis.svg";
 
 interface CardProps {
-  key:number;
+  key: number;
   title: string;
   hours: number;
   total: string;
-  color: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, hours, total, image, color }) => {
+const Card: React.FC<CardProps> = ({ title, hours, total }) => {
   return (
     <>
       <div className="relative">
-        <div
-          className="rounded-lg z-10 flex justify-end items-start"
-          style={{ backgroundColor: color }}
-        >
+        <div className="rounded-lg z-10 flex justify-end items-start">
           {/* <img
             src={image}
             alt="icon-work"
