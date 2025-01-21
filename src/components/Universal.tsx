@@ -8,6 +8,7 @@ const Universal = () => {
           {dataJson.map((data,index) => (
             <Card
             key={index}
+            image={data.image}
             title={data.title}
             hours={`${data.timeframes.daily.current}hrs`}
             total={`Last Week - ${data.timeframes.daily.previous}`}

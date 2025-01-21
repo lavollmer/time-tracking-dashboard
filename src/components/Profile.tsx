@@ -6,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 const Profile = () => {
   const navigate = useNavigate();
 
-  const ClickUniversal = () => {
+  const clickUniversal = () => {
     console.log("Universal Clicked");
-    navigate("/");
+    navigate("/universal");
   }
 
-  // const ClickUniversal = () => {
+  // const clickUniversal = () => {
   //   console.log("Daily Clicked");
   //   navigate("/daily");
   // };
@@ -44,13 +44,13 @@ const Profile = () => {
         </div>
         <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
           <div className="flex flex-col space-y-2">
-            <button className="hover:font-bold" onClick={ClickUniversal}>
+            <button className="hover:font-bold" onClick={clickUniversal}>
               Daily
             </button>
-            <button className="hover:font-bold" onClick={ClickUniversal}>
+            <button className="hover:font-bold" onClick={clickUniversal}>
               Weekly
             </button>
-            <button className="hover:font-bold" onClick={ClickUniversal}>
+            <button className="hover:font-bold" onClick={clickUniversal}>
               Monthly
             </button>
           </div>
