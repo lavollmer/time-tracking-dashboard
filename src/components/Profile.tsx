@@ -1,15 +1,15 @@
 import ProfileImage from "../assets/image-jeremy.png";
 import "../index.css";
 import "../App.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const clickUniversal = () => {
-    console.log("Universal Clicked");
-    navigate("/universal");
-  }
+  // const clickUniversal = () => {
+  //   console.log("Universal Clicked");
+  //   navigate("/universal");
+  // }
 
   // const clickUniversal = () => {
   //   console.log("Daily Clicked");
@@ -44,7 +44,10 @@ const Profile = () => {
         </div>
         <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
           <div className="flex flex-col space-y-2">
-            <button className="hover:font-bold" onClick={clickUniversal}>
+              <h1 className="text-sm font-light">Daily</h1>
+              <h1 className="text-sm font-light">Weekly</h1>
+              <h1 className="text-sm font-light">Monthly</h1>
+            {/* <button className="hover:font-bold" onClick={clickUniversal}>
               Daily
             </button>
             <button className="hover:font-bold" onClick={clickUniversal}>
@@ -52,7 +55,7 @@ const Profile = () => {
             </button>
             <button className="hover:font-bold" onClick={clickUniversal}>
               Monthly
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
