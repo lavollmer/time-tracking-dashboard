@@ -2,25 +2,29 @@ import ProfileImage from "../assets/image-jeremy.png";
 import "../index.css";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-import Data from "../data.json";
 
 const Profile = () => {
   const navigate = useNavigate();
 
-  const clickDaily = () => {
-    console.log("Daily Clicked");
-    navigate("/daily");
-  };
+  const ClickUniversal = () => {
+    console.log("Universal Clicked");
+    navigate("/");
+  }
 
-  const clickWeekly = () => {
-    console.log("Weekly Clicked");
-    navigate("/weekly");
-  };
+  // const ClickUniversal = () => {
+  //   console.log("Daily Clicked");
+  //   navigate("/daily");
+  // };
 
-  const clickMonthly = () => {
-    console.log("Monthly Clicked");
-    navigate("/monthly");
-  };
+  // const clickWeekly = () => {
+  //   console.log("Weekly Clicked");
+  //   navigate("/weekly");
+  // };
+
+  // const clickMonthly = () => {
+  //   console.log("Monthly Clicked");
+  //   navigate("/monthly");
+  // };
 
   return (
     <>
@@ -40,13 +44,13 @@ const Profile = () => {
         </div>
         <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
           <div className="flex flex-col space-y-2">
-            <button className="hover:font-bold" onClick={clickDaily}>
+            <button className="hover:font-bold" onClick={ClickUniversal}>
               Daily
             </button>
-            <button className="hover:font-bold" onClick={clickWeekly}>
+            <button className="hover:font-bold" onClick={ClickUniversal}>
               Weekly
             </button>
-            <button className="hover:font-bold" onClick={clickMonthly}>
+            <button className="hover:font-bold" onClick={ClickUniversal}>
               Monthly
             </button>
           </div>

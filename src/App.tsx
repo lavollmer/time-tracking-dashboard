@@ -5,6 +5,7 @@ import Profile from "./components/Profile";
 import Daily from "./components/Daily";
 import Monthly from "./components/Monthly";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Universal from "./components/Universal";
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Profile />} />
-          <Route path="/daily" element={<Daily />} />
-          <Route path="/weekly" element={<Weekly />} />
-          <Route path="/monthly" element={<Monthly />} />
+          <Route path="/daily" element={<Universal />} />
+          {/* <Route path="/weekly" element={<Weekly />} />
+          <Route path="/monthly" element={<Monthly />} /> */}
         </Routes>
       </Router>
     </>
