@@ -22,7 +22,7 @@ interface Data {
 
 const App = () => {
   const [jsonData, setJsonData] = useState<Data[]>([]);
-  const [selectedItems, setSelectedItems] = useState<Data | null>(null);
+  const [selectedTimeframe, setSelectedTimeframe] = useState<"daily" | "weekly" | "monthly">("daily");
 
   useEffect(() => {
     fetch("/data.json")
@@ -39,25 +39,10 @@ const App = () => {
       .catch((error) => console.log("Error:", error));
   }, []);
 
-  const handleItemClickDaily = () => {
-    // console.log("Clicked");
-    // if (jsonData.length > 0) {
-    //   console.log("Setting selected item:", jsonData[0]);
-    //   setSelectedItem(jsonData[0]);
-    // }
-    console.log("Clicked");
-    setSelectedItems(jsonData);
-  };
-
-  const handleItemClickWeekly = () => {
-    console.log("Clicked");
-    setSelectedItems(jsonData);
-  };
-
-  const handleItemClickMonthly = () => {
-    console.log("Clicked");
-    setSelectedItems(jsonData);
-  };
+const handleItemClick = (timeframe: "daily" | "weekly" | "monthly") => {
+  console.log("Item clicked");
+  setSelectedTimeframe(timeframe);
+}
 
   return (
       <div className="bg-veryDarkBlue h-screen w-screen flex justify-center items-center">
@@ -77,26 +62,26 @@ const App = () => {
           </div>
           <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
             <div className="flex flex-col space-y-2">
-              <button className="hover:font-bold" onClick={handleItemClickDaily}>
+              <button className="hover:font-bold" onClick={()=>handleItemClick("daily")}>
                 Daily
               </button>
-              <button className="hover:font-bold" onClick={handleItemClickWeekly}>
+              <button className="hover:font-bold" onClick={()=>handleItemClick("weekly")}>
                 Weekly
               </button>
-              <button className="hover:font-bold" onClick={handleItemClickMonthly}>
+              <button className="hover:font-bold" onClick={()=>handleItemClick("monthly")}>
                 Monthly
               </button>
             </div>
           </div>
         </div>
         <div className="p-10 rounded-lg">
-        {selectedItems.map((item, index) => (
+        {jsonData.map((item, index) => (
           <Card
             key={index} 
             image={item.image}
             title={item.title}
-            hours={`${item.timeframes.daily.current}hrs`}
-            total={`Last Week - ${item.timeframes.daily.previous}hrs`}
+            hours={`${item.timeframes[selectedTimeframe].current}hrs`}
+            total={`Last Week - ${item.timeframes[selectedTimeframe].previous}hrs`}
             color="hsl(15, 100%, 70%)"
           />
         ))}
