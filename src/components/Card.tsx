@@ -4,9 +4,9 @@ interface CardProps {
   key: number;
   image: string;
   title: string;
-  hours: string;
-  total: string;
-  color?: string;
+  hours: number;
+  total: number;
+  color: string;
 }
 
 const Card: React.FC<CardProps> = ({ title, hours, total, image,color }) => {

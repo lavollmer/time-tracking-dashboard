@@ -4,9 +4,26 @@ import "../App.css";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 
+interface Timeframe {
+  current: number;
+  previous: number;
+}
+
+interface Data {
+  title: string;
+  timeframes: {
+    daily: Timeframe;
+    weekly: Timeframe;
+    monthly: Timeframe;
+  };
+  hours: number;
+  total: number;
+  image: string;
+}
+
 const Profile = () => {
-  const [jsonData, setjsonData] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [jsonData, setjsonData] = useState<Data[]>([]);
+  const [selectedItem, setSelectedItem] = useState<Data | null>(null);
 
   useEffect(() => {
     fetch("../data.json")
@@ -53,7 +70,7 @@ const Profile = () => {
                   title={data.title}
                   hours={`${data.timeframes.daily.current}hrs`}
                   total={`Last Week - ${data.timeframes.daily.previous}hrs`}
-                  color="hsl(15, 100%, 70%)" 
+                  color="hsl(15, 100%, 70%)"
                 />
               ))}
             </div>
