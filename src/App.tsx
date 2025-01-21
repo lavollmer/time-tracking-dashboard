@@ -49,9 +49,9 @@ const App = () => {
   };
 
   return (
-    <div className="bg-veryDarkBlue h-screen w-screen flex flex-col md:flex-row items-center justify-center p-10 md:p-60">
-      <div className="flex flex-col space-y-6 bg-blue text-white font-rubik p-8 rounded-lg">
-        <div className="rounded-full">
+    <div className="flex flex-col space-y-6 bg-veryDarkBlue text-white font-rubik h-screen w-screen flex flex-col md:flex-row items-center justify-center p-10 md:p-60">
+      <div className="relative z-20 bg-blue p-8 rounded-lg">
+        <div className="relative rounded-lg mb-40">
           <div>
             <img
               src={ProfileImage}
@@ -64,7 +64,7 @@ const App = () => {
             <h2 className="text-4xl font-regular">Jeremy Robson</h2>
           </div>
         </div>
-        <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
+        <div className="absolute inset-0 z-10 mt-64 bg-darkBlue w-full p-4 rounded-lg">
           <div className="flex flex-col space-y-2">
             <button
               className="hover:font-bold"
