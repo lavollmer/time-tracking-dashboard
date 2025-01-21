@@ -22,7 +22,7 @@ interface Data {
 
 const App = () => {
   const [jsonData, setJsonData] = useState<Data[]>([]);
-  const [selectedItem, setSelectedItem] = useState<Data | null>(null);
+  const [selectedItems, setSelectedItems] = useState<Data | null>(null);
 
   useEffect(() => {
     fetch("/data.json")
@@ -39,12 +39,24 @@ const App = () => {
       .catch((error) => console.log("Error:", error));
   }, []);
 
-  const handleItemClick = () => {
+  const handleItemClickDaily = () => {
+    // console.log("Clicked");
+    // if (jsonData.length > 0) {
+    //   console.log("Setting selected item:", jsonData[0]);
+    //   setSelectedItem(jsonData[0]);
+    // }
     console.log("Clicked");
-    if (jsonData.length > 0) {
-      console.log("Setting selected item:", jsonData[0]);
-      setSelectedItem(jsonData[0]);
-    }
+    setSelectedItems(jsonData);
+  };
+
+  const handleItemClickWeekly = () => {
+    console.log("Clicked");
+    setSelectedItems(jsonData);
+  };
+
+  const handleItemClickMonthly = () => {
+    console.log("Clicked");
+    setSelectedItems(jsonData);
   };
 
   return (
@@ -65,23 +77,29 @@ const App = () => {
           </div>
           <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
             <div className="flex flex-col space-y-2">
-              <button className="hover:font-bold" onClick={handleItemClick}>
-                Click
+              <button className="hover:font-bold" onClick={handleItemClickDaily}>
+                Daily
+              </button>
+              <button className="hover:font-bold" onClick={handleItemClickWeekly}>
+                Weekly
+              </button>
+              <button className="hover:font-bold" onClick={handleItemClickMonthly}>
+                Monthly
               </button>
             </div>
           </div>
         </div>
         <div className="p-10 rounded-lg">
-          {selectedItem && (
-            <Card
-              key={selectedItem.id}
-              image={selectedItem.image}
-              title={selectedItem.title}
-              hours={`${selectedItem.timeframes.daily.current}hrs`}
-              total={`Last Week - ${selectedItem.timeframes.daily.previous}hrs`}
-              color="hsl(15, 100%, 70%)"
-            />
-          )}
+        {selectedItems.map((item, index) => (
+          <Card
+            key={index} 
+            image={item.image}
+            title={item.title}
+            hours={`${item.timeframes.daily.current}hrs`}
+            total={`Last Week - ${item.timeframes.daily.previous}hrs`}
+            color="hsl(15, 100%, 70%)"
+          />
+        ))}
         </div>
       </div>
   );
