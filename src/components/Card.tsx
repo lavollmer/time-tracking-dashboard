@@ -1,8 +1,9 @@
 import iconDots from "../assets/icon-ellipsis.svg";
 
 interface CardProps {
+  key:number;
   title: string;
-  hours: string;
+  hours: number;
   total: string;
   image: string;
   color: string;
