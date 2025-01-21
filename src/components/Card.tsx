@@ -3,7 +3,7 @@ import iconDots from "../assets/icon-ellipsis.svg";
 interface CardProps {
   key: number;
   title: string;
-  hours: number;
+  hours: string;
   total: string;
 }
 
