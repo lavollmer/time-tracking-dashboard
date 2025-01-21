@@ -18,11 +18,14 @@ interface Data {
     monthly: Timeframe;
   };
   image: string;
+  color: string;
 }
 
 const App = () => {
   const [jsonData, setJsonData] = useState<Data[]>([]);
-  const [selectedTimeframe, setSelectedTimeframe] = useState<"daily" | "weekly" | "monthly">("daily");
+  const [selectedTimeframe, setSelectedTimeframe] = useState<
+    "daily" | "weekly" | "monthly"
+  >("daily");
 
   useEffect(() => {
     fetch("/data.json")
@@ -39,54 +42,63 @@ const App = () => {
       .catch((error) => console.log("Error:", error));
   }, []);
 
-const handleItemClick = (timeframe: "daily" | "weekly" | "monthly") => {
-  console.log("Item clicked");
-  setSelectedTimeframe(timeframe);
-}
+  const handleItemClick = (timeframe: "daily" | "weekly" | "monthly") => {
+    console.log("Item clicked");
+    setSelectedTimeframe(timeframe);
+  };
 
   return (
-      <div className="bg-veryDarkBlue h-screen w-screen flex justify-center items-center">
-        <div className="flex flex-col space-y-6 bg-blue text-white font-rubik p-8 rounded-lg">
-          <div className="rounded-full">
-            <div>
-              <img
-                src={ProfileImage}
-                alt="Profile Image"
-                className="border border-white rounded-full ring w-16 h-16"
-              />
-            </div>
-            <div className="text-left  pt-4">
-              <h1 className="text-sm font-light">Report for</h1>
-              <h2 className="text-4xl font-regular">Jeremy Robson</h2>
-            </div>
+    <div className="bg-veryDarkBlue h-screen w-screen flex flex-row items-center justify-center p-10 md:p-60">
+      <div className="flex flex-col space-y-6 bg-blue text-white font-rubik p-8 rounded-lg">
+        <div className="rounded-full">
+          <div>
+            <img
+              src={ProfileImage}
+              alt="Profile Image"
+              className="border border-white rounded-full ring w-16 h-16"
+            />
           </div>
-          <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
-            <div className="flex flex-col space-y-2">
-              <button className="hover:font-bold" onClick={()=>handleItemClick("daily")}>
-                Daily
-              </button>
-              <button className="hover:font-bold" onClick={()=>handleItemClick("weekly")}>
-                Weekly
-              </button>
-              <button className="hover:font-bold" onClick={()=>handleItemClick("monthly")}>
-                Monthly
-              </button>
-            </div>
+          <div className="text-left  pt-4">
+            <h1 className="text-sm font-light">Report for</h1>
+            <h2 className="text-4xl font-regular">Jeremy Robson</h2>
           </div>
         </div>
-        <div className="p-10 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
+          <div className="flex flex-col space-y-2">
+            <button
+              className="hover:font-bold"
+              onClick={() => handleItemClick("daily")}
+            >
+              Daily
+            </button>
+            <button
+              className="hover:font-bold"
+              onClick={() => handleItemClick("weekly")}
+            >
+              Weekly
+            </button>
+            <button
+              className="hover:font-bold"
+              onClick={() => handleItemClick("monthly")}
+            >
+              Monthly
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="rounded-lg grid grid-cols-1 md:grid-cols-2 gap-10 p-6 w-full">
         {jsonData.map((item, index) => (
           <Card
-            key={index} 
+            key={index}
             image={item.image}
             title={item.title}
             hours={`${item.timeframes[selectedTimeframe].current}hrs`}
             total={`Last Week - ${item.timeframes[selectedTimeframe].previous}hrs`}
-            color="hsl(15, 100%, 70%)"
+            color={item.color}
           />
         ))}
-        </div>
       </div>
+    </div>
   );
 };
 
