@@ -1,12 +1,6 @@
-# Things to Work On
-
-- Debugging tailwindcss config file
-- Laying out the template of colors and styles
-- Figuring out how to showcase daily, weekly and yearly styles
-
 # Time Tracking Dashboard Laura Dev
 
-This solo project Time Tracking Dashboard
+This solo project Time Tracking Dashboard involved using TypeScript, TailwindCSS, interactive components and modern responsive design.
 
 ## Table of contents
 
@@ -22,8 +16,6 @@ This solo project Time Tracking Dashboard
 
 ## Overview
 
-Challenge: A perfect opportunity to practice your CSS Grid skills. For anyone wanting to take it up a notch, we provide a JSON data file to practice working with data.
-
 Your users should be able to:
 
 - Switch between viewing Daily, Weekly, and Monthly stats
@@ -35,21 +27,7 @@ Your users should be able to:
 <p style="font-size:20px;">Desktop Version:</p>
 
 
-
-<p style="font-size:20px;">Desktop Version Body Component:</p>
-
-
-
-<p style="font-size:20px;">Desktop Version Footer Component:</p>
-
-
-
-<p style="font-size:20px;">Mobile Version Landing Page:</p>
-
-
-
-<p style="font-size:20px;">Mobile Version Side Navigation Bar:</p>
-
+<p style="font-size:20px;">Mobile Version:</p>
 
 
 ## Links
@@ -59,12 +37,18 @@ Your users should be able to:
 
 ## My Process
 
+The time tracking dashboard was foccused on utlizing TypeScript and TailwindCSS for styling. I began by downloading all the relevant design files and thoroughly reviewing the material. I created a Github Repo, installed TypeScript and TailwindCSS. I then added the assets file and configured TailwindCSS with the appropriate Google Fonts, colors and font sizes.
+
+My intial step was to undersstand the structure of the files before diving into the styling. My goal was to create reusable components that could easily be updated. Intially, I created several components such as Card, Profile, Daily, Monthly and Weekly. Each component was designed to organize the content and data effectively.
+
+As the project progressed, I realized that it would be better to use the data.json file that was provided and write javascript to display the information. This required me to start over by importing the data file. I integrated the Profile component code into the App.tsx file to serve as the main application. Orginally, I had a browser router navigation to display the data, but this did not provide a seamless experienced I desired with button clicks. As a result, I streamlined the project to only two TypeScript files. This refractoring of the code made the project more seamless and user-friendly. Thanks to the up front work in streamlining the process, adding the mobile responsiveness at the end was straightforward.
+
+This was my first application using TypeScript, and I became familiar with declaring interfaces for variables/props. I was able to gain a deeper understanding off creating interactive sections in the application.
 
 ## Built with
 
 - Typescript
 - TailwindCSS
-- ReactJS
 - Google Fonts
 - Github
 
@@ -76,9 +60,9 @@ I reinforced and learned a lot of new things during this project. Some of things
 2. **_Concurrently dev script_** - Concurrently is a command-line tool that allows multiple commands to run in a single terminal window. It allows the application to run multiple processes at the same time. 
 3. **_Reusable Components_** - I worked a lot more on the reusable components aspect - trying to make one component that could be used for all the card sections. I was able to learn about passing down props for styling and using Typescript.
 
-
 ## Continued development
 
+I want to continue to learn more about TypeScript and apply it to other projects I'm working on. I found the overlay design aspect to be challenging; therefore, I want to work on the z-index tailwindCSS styling.
 
 ## Useful resources
 

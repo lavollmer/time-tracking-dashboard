@@ -1,9 +1,10 @@
+import { useEffect, useState } from "react";
 import ProfileImage from "./assets/image-jeremy.png";
 import "./index.css";
 import "./App.css";
 import Card from "./components/Card";
-import { useEffect, useState } from "react";
 
+//defining types for the data
 interface Timeframe {
   current: number;
   previous: number;
@@ -23,11 +24,13 @@ interface Data {
 }
 
 const App = () => {
+  // state to store the fetched data
   const [jsonData, setJsonData] = useState<Data[]>([]);
   const [selectedTimeframe, setSelectedTimeframe] = useState<
     "daily" | "weekly" | "monthly"
   >("daily");
 
+  // fetch the data
   useEffect(() => {
     fetch("/data.json")
       .then((response) => {
@@ -43,13 +46,14 @@ const App = () => {
       .catch((error) => console.log("Error:", error));
   }, []);
 
+  // function to handle button click to display data
   const handleItemClick = (timeframe: "daily" | "weekly" | "monthly") => {
     console.log("Item clicked");
     setSelectedTimeframe(timeframe);
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row md:space-y-0 space-y-6 bg-veryDarkBlue text-white font-rubik w-screen md:justify-center md:items-center p-10 md:p-60">
+    <div className="min-h-screen flex flex-col md:flex-row md:space-y-0 space-y-6 bg-veryDarkBlue text-white font-rubik w-screen md:justify-center md:items-center p-10 md:p-40">
       <div className="relative z-20 bg-blue p-8 rounded-lg">
         <div className="relative rounded-lg mb-40">
           <div>
@@ -87,6 +91,7 @@ const App = () => {
           </div>
         </div>
       </div>
+      {/* mapping individual cards with data */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:pl-10 w-full rounded-lg ">
         {jsonData.map((item, index) => (
           <Card
