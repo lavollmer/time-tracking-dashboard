@@ -30,21 +30,35 @@ const App = () => {
     "daily" | "weekly" | "monthly"
   >("daily");
 
-  // fetch the data
+  // // fetch the data
+  // useEffect(() => {
+  //   fetch("/data.json")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data: Data[]) => {
+  //       console.log("Fetched data:", data);
+  //       setJsonData(data);
+  //     })
+  //     .catch((error) => console.log("Error:", error));
+  // }, []);
+
   useEffect(() => {
-    fetch("/data.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data: Data[]) => {
-        console.log("Fetched data:", data);
-        setJsonData(data);
-      })
-      .catch((error) => console.log("Error:", error));
-  }, []);
+    const fetchData = async() =>{
+      const response = await fetch("/data.json")
+      const data = await response.json()
+      setJsonData(data);
+    }
+
+    fetchData()
+  } ,[])
+
+  if(!jsonData){
+    return <div>Loading...</div>
+  }
 
   // function to handle button click to display data
   const handleItemClick = (timeframe: "daily" | "weekly" | "monthly") => {
