@@ -6,13 +6,14 @@ interface CardProps {
   title: string;
   hours: string;
   total: string;
+  color?: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, hours, total, image }) => {
+const Card: React.FC<CardProps> = ({ title, hours, total, image,color }) => {
   return (
     <>
       <div className="relative">
-        <div className="rounded-lg z-10 flex justify-end items-start">
+        <div className="rounded-lg z-10 flex justify-end items-start" style={{ backgroundColor: color }}>
           <img
             src={image}
             alt="icon-work"

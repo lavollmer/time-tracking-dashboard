@@ -38,29 +38,27 @@ const Profile = () => {
         </div>
         <div className="bg-darkBlue w-full h-full p-4 rounded-lg">
           <div className="flex flex-col space-y-2">
-            <h1 className="text-sm font-light">Daily</h1>
-            <h1 className="text-sm font-light">Weekly</h1>
-            <h1 className="text-sm font-light">Monthly</h1>
             <button className="hover:font-bold" onClick={handleItemClick}>
               Click
             </button>
-            <button className="hover:font-bold">Weekly</button>
-            <button className="hover:font-bold">Monthly</button>
           </div>
         </div>
-        {selectedItem && (
-          <div className="grid grid-cols-2 gap-6">
-            {jsonData.map((data, index) => (
-              <Card
-                key={index}
-                image={data.image}
-                title={data.title}
-                hours={`${data.timeframes.daily.current}hrs`}
-                total={`Last Week - ${data.timeframes.daily.previous}`}
-              />
-            ))}
-          </div>
-        )}
+        <div>
+          {selectedItem && (
+            <div className="grid grid-cols-2 gap-6">
+              {jsonData.map((data, index) => (
+                <Card
+                  key={index}
+                  image={data.image}
+                  title={data.title}
+                  hours={`${data.timeframes.daily.current}hrs`}
+                  total={`Last Week - ${data.timeframes.daily.previous}hrs`}
+                  color="hsl(15, 100%, 70%)" 
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
