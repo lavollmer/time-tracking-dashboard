@@ -5,6 +5,7 @@ import Play from "../assets/icon-play.svg";
 import SelfCare from "../assets/icon-self-care.svg";
 import Social from "../assets/icon-social.svg";
 import Study from "../assets/icon-study.svg";
+import jsonData from "../data.json";
 
 const Daily = () => {
   return (
