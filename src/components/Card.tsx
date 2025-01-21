@@ -9,7 +9,7 @@ interface CardProps {
   color: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, hours, total, image,color }) => {
+const Card: React.FC<CardProps> = ({ title, hours, total, image, color }) => {
   return (
     <>
       <div className="relative">

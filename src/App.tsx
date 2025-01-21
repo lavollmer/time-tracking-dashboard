@@ -74,7 +74,7 @@ const handleItemClick = (timeframe: "daily" | "weekly" | "monthly") => {
             </div>
           </div>
         </div>
-        <div className="p-10 rounded-lg">
+        <div className="p-10 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-6">
         {jsonData.map((item, index) => (
           <Card
             key={index} 
