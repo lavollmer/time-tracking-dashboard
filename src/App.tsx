@@ -49,7 +49,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col space-y-6 bg-veryDarkBlue text-white font-rubik h-screen w-screen flex flex-col md:flex-row items-center justify-center p-10 md:p-60">
+    <div className="min-h-screen flex flex-col md:flex-row md:space-y-0 space-y-6 bg-veryDarkBlue text-white font-rubik w-screen md:justify-center md:items-center p-10 md:p-60">
       <div className="relative z-20 bg-blue p-8 rounded-lg">
         <div className="relative rounded-lg mb-40">
           <div>
