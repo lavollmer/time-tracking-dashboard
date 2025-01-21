@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "Work",
     "timeframes": {
       "daily": {
@@ -15,12 +14,9 @@
         "current": 103,
         "previous": 128
       }
-    },
-    "color": "hsl(15, 100%, 70%)",
-    "image":"./assets/icon-work.svg"
+    }
   },
   {
-    "id": 2,
     "title": "Play",
     "timeframes": {
       "daily": {
@@ -35,12 +31,9 @@
         "current": 23,
         "previous": 29
       }
-    },
-    "play": "hsl(195, 74%, 62%)",
-    "image":"./assets/icon-play.svg"
+    }
   },
   {
-    "id": 3,
     "title": "Study",
     "timeframes": {
       "daily": {
@@ -55,12 +48,9 @@
         "current": 13,
         "previous": 19
       }
-    },
-    "color": "hsl(348, 100%, 68%)",
-    "image":"./assets/icon-study.svg"
+    }
   },
   {
-    "id": 4,
     "title": "Exercise",
     "timeframes": {
       "daily": {
@@ -75,12 +65,9 @@
         "current": 11,
         "previous": 18
       }
-    },
-    "color": "hsl(145, 58%, 55%)",
-    "image":"./assets/icon-excercise.svg"
+    }
   },
   {
-    "id": 5,
     "title": "Social",
     "timeframes": {
       "daily": {
@@ -95,12 +82,9 @@
         "current": 21,
         "previous": 23
       }
-    },
-    "color": "hsl(264, 64%, 52%)",
-    "image":"./assets/icon-social.svg"
+    }
   },
   {
-    "id": 6,
     "title": "Self Care",
     "timeframes": {
       "daily": {
@@ -115,8 +99,6 @@
         "current": 7,
         "previous": 11
       }
-    },
-    "color": "hsl(43, 84%, 65%)",
-    "image":"./assets/icon-self-care.svg"
+    }
   }
 ]

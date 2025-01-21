@@ -47,8 +47,7 @@ const App = () => {
   };
 
   return (
-    <>
-      <div>
+      <div className="bg-veryDarkBlue h-screen w-screen flex justify-center items-center">
         <div className="flex flex-col space-y-6 bg-blue text-white font-rubik p-8 rounded-lg">
           <div className="rounded-full">
             <div>
@@ -71,7 +70,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="bg-white text-darkBlue p-10 rounded-lg">
+        <div className="p-10 rounded-lg">
           {selectedItem && (
             <Card
               key={0}
@@ -84,7 +83,6 @@ const App = () => {
           )}
         </div>
       </div>
-    </>
   );
 };
 
