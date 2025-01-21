@@ -92,7 +92,7 @@ const App = () => {
           <Card
             key={index}
             image={item.image}
-            image={item.imageAlt}
+            imageAlt={item.imageAlt}
             title={item.title}
             hours={`${item.timeframes[selectedTimeframe].current}hrs`}
             total={`Last Week - ${item.timeframes[selectedTimeframe].previous}hrs`}
