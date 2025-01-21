@@ -16,25 +16,30 @@ interface Data {
     weekly: Timeframe;
     monthly: Timeframe;
   };
-  hours: number;
-  total: number;
   image: string;
 }
 
 const Profile = () => {
-  const [jsonData, setjsonData] = useState<Data[]>([]);
+  const [jsonData, setJsonData] = useState<Data[]>([]);
   const [selectedItem, setSelectedItem] = useState<Data | null>(null);
 
   useEffect(() => {
-    fetch("../data.json")
-      .then((response) => response.json())
-      .then((data) => setjsonData(data))
-      .catch((error) => console.log("Error", error));
+    fetch("/data.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data: Data[]) => setJsonData(data))
+      .catch((error) => console.log("Error:", error));
   }, []);
 
   const handleItemClick = () => {
     console.log("Clicked");
-    setSelectedItem(jsonData[0]);
+    if (jsonData.length > 0) {
+      setSelectedItem(jsonData[0]);
+    }
   };
 
   return (
@@ -63,16 +68,14 @@ const Profile = () => {
         <div>
           {selectedItem && (
             <div className="grid grid-cols-2 gap-6">
-              {jsonData.map((data, index) => (
-                <Card
-                  key={index}
-                  image={data.image}
-                  title={data.title}
-                  hours={`${data.timeframes.daily.current}hrs`}
-                  total={`Last Week - ${data.timeframes.daily.previous}hrs`}
-                  color="hsl(15, 100%, 70%)"
-                />
-              ))}
+              <Card
+                key={0}
+                image={selectedItem.image}
+                title={selectedItem.title}
+                hours={`${selectedItem.timeframes.daily.current}hrs`}
+                total={`Last Week - ${selectedItem.timeframes.daily.previous}hrs`}
+                color="hsl(15, 100%, 70%)"
+              />
             </div>
           )}
         </div>

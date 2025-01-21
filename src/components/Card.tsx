@@ -4,8 +4,8 @@ interface CardProps {
   key: number;
   image: string;
   title: string;
-  hours: number;
-  total: number;
+  hours: string;
+  total: string;
   color: string;
 }
 
