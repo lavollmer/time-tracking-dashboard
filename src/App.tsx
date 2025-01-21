@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-    <div className="bg-veryDarkBlue h-screen w-screen flex flex-row items-center justify-center p-10 md:p-60">
+    <div className="bg-veryDarkBlue h-screen w-screen flex flex-col md:flex-row items-center justify-center p-10 md:p-60">
       <div className="flex flex-col space-y-6 bg-blue text-white font-rubik p-8 rounded-lg">
         <div className="rounded-full">
           <div>
@@ -58,7 +58,7 @@ const App = () => {
               className="border border-white rounded-full ring w-16 h-16"
             />
           </div>
-          <div className="text-left  pt-4">
+          <div className="text-left pt-4">
             <h1 className="text-sm font-light">Report for</h1>
             <h2 className="text-4xl font-regular">Jeremy Robson</h2>
           </div>
@@ -86,7 +86,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="rounded-lg grid grid-cols-1 md:grid-cols-2 gap-10 p-6 w-full">
+      <div className="rounded-lg grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 p-6 w-full">
         {jsonData.map((item, index) => (
           <Card
             key={index}

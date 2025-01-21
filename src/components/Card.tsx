@@ -12,7 +12,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, hours, total, image, color }) => {
   return (
     <>
-      <div className="relative w-full h-24 cursor-pointer rounded-lg">
+      <div className="relative cursor-pointer rounded-lg">
         <div
           className="rounded-lg flex w-full"
           style={{ backgroundColor: color }}
