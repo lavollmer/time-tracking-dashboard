@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
           className="absolute inset-0 z-10 flex flex-row justify-end items-start rounded-lg flex w-full h-24 -mt-4"
           style={{ backgroundColor: color }}
         >
-          <img src={image} alt={imageAlt} className="p-2 h-16 w-16" />
+          <img src={image} alt={imageAlt} className="p-2" />
         </div>
         <div className="relative z-20 w-full text-white bg-darkBlue hover:bg-desaturatedBlue font-rubik p-6 rounded-lg mt-8">
           <div className="flex flex-col space-y-2">

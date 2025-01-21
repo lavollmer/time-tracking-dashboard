@@ -87,7 +87,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="rounded-lg grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 p-6 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:pl-10 w-full rounded-lg ">
         {jsonData.map((item, index) => (
           <Card
             key={index}
