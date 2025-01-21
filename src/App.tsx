@@ -6,14 +6,10 @@ import Universal from "./components/Universal";
 function App() {
   return (
     <>
-      <div className="p-6 bg-veryDarkBlue font-rubik h-screen w-screen">
-        <div className="flex flex-row items-center justify-center space-x-6">
-          <div>
-            <Profile />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Universal />
-          </div>
+      <div className="bg-veryDarkBlue font-rubik h-screen w-screen">
+        <div className="flex flex-row space-x-6 p-6">
+          <Profile />
+          <Universal />
         </div>
       </div>
     </>
