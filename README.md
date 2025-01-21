@@ -26,14 +26,17 @@ Your users should be able to:
 
 <p style="font-size:20px;">Desktop Version:</p>
 
+![Desktop Page](./src/assets/mainpage.png)
 
 <p style="font-size:20px;">Mobile Version:</p>
+
+![Mobile Page](./src/assets/mobilepage.png)
 
 
 ## Links
 
-- Live Site URL: [Time Tracking Dashboard Website Laura Dev]()
-- Frontend Mentor URL Solution: [Frontend Mentor Laura Dev Solution]()
+- Live Site URL: [Time Tracking Dashboard Website Laura Dev](https://time-tracking-dashboard-lauradev.netlify.app/)
+- Frontend Mentor URL Solution: [Frontend Mentor Laura Dev Solution](https://www.frontendmentor.io/solutions/responsive-time-tracking-table-with-typescript-tailwindcss-_0Z11-Q9oA)
 
 ## My Process
 

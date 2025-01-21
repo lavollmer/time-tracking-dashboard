@@ -30,21 +30,6 @@ const App = () => {
     "daily" | "weekly" | "monthly"
   >("daily");
 
-  // // fetch the data
-  // useEffect(() => {
-  //   fetch("/data.json")
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((data: Data[]) => {
-  //       console.log("Fetched data:", data);
-  //       setJsonData(data);
-  //     })
-  //     .catch((error) => console.log("Error:", error));
-  // }, []);
 
   useEffect(() => {
     const fetchData = async() =>{
