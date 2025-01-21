@@ -10,6 +10,7 @@ interface Timeframe {
 }
 
 interface Data {
+  id: number;
   title: string;
   timeframes: {
     daily: Timeframe;
@@ -73,7 +74,7 @@ const App = () => {
         <div className="p-10 rounded-lg">
           {selectedItem && (
             <Card
-              key={0}
+              key={selectedItem.id}
               image={selectedItem.image}
               title={selectedItem.title}
               hours={`${selectedItem.timeframes.daily.current}hrs`}
